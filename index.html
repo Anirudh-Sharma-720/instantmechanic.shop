@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instant Mechanic (frontend clone)</title>
+<meta name="description" content="Roadside help, AI diagnosis, and fair-priced repairs for car owners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top"><span class="brand-mark">IM</span> Instant Mechanic</a>
+  <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+  <nav id="menu" class="menu">
+    <a href="#services">Car services</a>
+    <a href="#diagnosis">AI diagnosis</a>
+    <a href="#membership">Membership</a>
+    <a href="#coverage">Coverage</a>
+    <a class="btn btn-ghost" href="tel:+919896263349">Call +91 98962 63349</a>
+    <a class="btn btn-solid" href="#book">Book now</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="tag">Car care for Delhi NCR</p>
+      <h1>Stuck on the road? A mechanic is already moving.</h1>
+      <p class="lead">Roadside rescue, instant AI diagnosis and repair bills you can read before you pay. One number covers it all.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#diagnosis">Try AI diagnosis, free</a>
+        <a class="btn btn-ghost" href="tel:+919896263349">Call now</a>
+      </div>
+    </div>
+    <div class="hero-art" role="img" aria-label="Placeholder hero image: a car on a road">
+      <div class="road"><span></span></div>
+      <div class="car">🚗</div>
+      <div class="badge">Mechanic ETA <b>20 min</b></div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Key numbers">
+    <div><b data-count="30000" data-suffix="+">0</b><span>cars served</span></div>
+    <div><b data-count="4.9" data-suffix="★" data-dec="1">0</b><span>average rating</span></div>
+    <div><b data-count="20" data-suffix=" min">0</b><span>typical response</span></div>
+    <div><b>24×7</b><span>every day of the year</span></div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="section">
+    <h2>Built around three promises</h2>
+    <p class="sub">Not just another booking app. A full toolkit for owning a car.</p>
+    <div class="pillars">
+      <article><span class="ico">⚡</span><h3>Help within 20 minutes</h3><p>Jump-starts, tyre swaps, towing and fuel top-ups. Mechanics carry common parts so most fixes happen on the spot.</p><em>Live now</em></article>
+      <article><span class="ico">🌙</span><h3>Open around the clock</h3><p>Night, highway or Sunday morning, someone picks up. Breakdowns don't keep office hours and neither do we.</p><em>Always on</em></article>
+      <article><span class="ico">🧾</span><h3>Bills you can read</h3><p>AI suggests, the mechanic repairs, you approve every line before work starts. No surprise charges.</p><em>Book a slot</em></article>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section dark" id="services">
+    <h2>Roadside help, step by step</h2>
+    <p class="sub">Pick what's wrong. We'll show what happens next.</p>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="battery">Battery</button>
+      <button role="tab" aria-selected="false" data-tab="tyre">Flat tyre</button>
+      <button role="tab" aria-selected="false" data-tab="tow">Towing</button>
+      <button role="tab" aria-selected="false" data-tab="fuel">Fuel</button>
+      <button role="tab" aria-selected="false" data-tab="key">Lockout</button>
+    </div>
+    <div class="tab-panel" id="tab-panel" aria-live="polite"></div>
+  </section>
+
+  <!-- AI DIAGNOSIS -->
+  <section class="section split" id="diagnosis">
+    <div>
+      <h2>Know what's wrong before you call anyone</h2>
+      <p class="sub left">Describe the noise, smell or warning light. The demo below shows how a diagnosis result could look.</p>
+      <ul class="checks">
+        <li>Likely causes ranked by probability</li>
+        <li>Rough repair cost range up front</li>
+        <li>A clear drive / don't-drive rating</li>
+      </ul>
+    </div>
+    <form class="chat" id="diag-form">
+      <label for="symptom">What's happening with your car?</label>
+      <textarea id="symptom" rows="3" placeholder="e.g. grinding noise when I brake"></textarea>
+      <button class="btn btn-solid" type="submit">Diagnose</button>
+      <div class="result" id="diag-result" hidden></div>
+      <small>Demo only. Results are canned examples, not real advice.</small>
+    </form>
+  </section>
+
+  <!-- MEMBERSHIP -->
+  <section class="section" id="membership">
+    <h2>One yearly plan for peace of mind</h2>
+    <div class="plan">
+      <div class="plan-head">
+        <p>Car Care Plan</p>
+        <div class="price"><b>₹1,599</b>/year</div>
+        <small>about ₹133 a month</small>
+      </div>
+      <ul>
+        <li>Unlimited emergency call-outs</li>
+        <li>Priority dispatch</li>
+        <li>One free 40-point health check a year</li>
+        <li>20% off garage repairs</li>
+        <li>Unlimited AI diagnosis</li>
+        <li>Digital service history</li>
+      </ul>
+      <a class="btn btn-solid" href="#book">Get membership</a>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section alt">
+    <h2>From call to fixed in four steps</h2>
+    <ol class="steps">
+      <li><h3>Call or message</h3><p>Tell us the problem in under a minute.</p></li>
+      <li><h3>Share your location</h3><p>Send a live pin from anywhere in the region.</p></li>
+      <li><h3>Mechanic on the way</h3><p>Verified, uniformed, tracked on a map.</p></li>
+      <li><h3>Fixed, then pay</h3><p>Approve the bill. UPI, card or cash.</p></li>
+    </ol>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <h2>What drivers say</h2>
+    <p class="sub">Placeholder reviews. Swap in your own.</p>
+    <div class="quotes" id="quotes">
+      <blockquote><p>Battery died late at night. Help arrived fast and the whole thing took minutes.</p><cite>Customer A, Gurugram</cite></blockquote>
+      <blockquote><p>Clear quote, no haggling. I knew the price before anyone touched the car.</p><cite>Customer B, Noida</cite></blockquote>
+      <blockquote><p>Felt safe waiting alone. The mechanic's ID checked out and I could track him live.</p><cite>Customer C, Delhi</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- COVERAGE -->
+  <section class="section dark" id="coverage">
+    <h2>Covering the whole NCR</h2>
+    <div class="chips">
+      <span>Gurugram</span><span>Delhi</span><span>Noida</span><span>Faridabad</span><span>Ghaziabad</span><span>Greater Noida</span><span>Manesar</span><span>Dwarka</span><span>Rohini</span><span>NH48</span><span>DND corridor</span><span>Indirapuram</span>
+    </div>
+    <p class="sub">More cities coming soon.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="book">
+    <h2>Your car, our problem.</h2>
+    <p>Call, message, or try the free diagnosis.</p>
+    <div class="cta-row center">
+      <a class="btn btn-solid" href="tel:+919896263349">Call +91 98962 63349</a>
+      <a class="btn btn-ghost light" href="#">WhatsApp</a>
+      <a class="btn btn-ghost light" href="#diagnosis">AI diagnosis</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <a class="brand" href="#top"><span class="brand-mark">IM</span> Instant Mechanic</a>
+    <p>Placeholder footer text for a car care platform.</p>
+  </div>
+  <div><h4>Platform</h4><a href="#services">Car services</a><a href="#diagnosis">AI diagnosis</a><a href="#membership">Membership</a></div>
+  <div><h4>Policies</h4><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cancellation</a><a href="#">Refunds</a></div>
+  <div><h4>Contact</h4><span>Your address here</span><a href="tel:+919896263349">+91 98962 63349</a><a href="mailto:anirudh@instantmechanic.shop">anirudh@instantmechanic.shop</a></div>
+  <p class="legal">Frontend practice clone. Not affiliated with the original site.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
